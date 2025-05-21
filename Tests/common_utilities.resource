@@ -1,7 +1,8 @@
 *** Settings ***
 Library   SeleniumLibrary
 
+*** Variables ***
+${browser}  gc
+${key_label}   ENTER
+
 *** Keywords ***
-Go to any website
-    [Arguments]   ${url}
-    Go To    ${url}

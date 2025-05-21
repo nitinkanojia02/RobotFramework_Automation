@@ -4,11 +4,8 @@ Library   SeleniumLibrary
 *** Variables ***
 ${browser}  gc
 ${flipkart_URL}   https://www.flipkart.com
-${youtube_URL}   https://www.youtube.com
 ${flipkart_search_textbox_locator}   //input[@name='q']
-${youtube_search_textbox_locator}   //input[@name='search_query']
 ${flipkart_search_text_input}   alexa
-${youtube_search_text_input}   chess
 ${searched_product_price_locator}   (//a[contains(@title,'Alexa Echo Dot')])[1]/following-sibling::a//div[@class='Nx9bqj']
 ${key_label}   ENTER
 

@@ -18,3 +18,6 @@ Drag and drop test
     ${headers_text_list}  Get texts from all visible elements  ${elements_header}
     Should Be Equal    ${headers_text_list}[0]    B
     Should Be Equal    ${headers_text_list}[1]    A
+
+new test case
+

@@ -19,5 +19,25 @@ Drag and drop test
     Should Be Equal    ${headers_text_list}[0]    B
     Should Be Equal    ${headers_text_list}[1]    A
 
-new test case
+AB Testing variation
+    Wait and click element      ${AB_Testing_locator}
+    Wait Until Location Contains    ${AB_Testing_location_string}
+    Wait Until Element Is Visible   ${AB_Testing_heading_locator}
+    page should contain     Also known as split testing.
+
+Add Remove Elements
+    Wait and click element      ${Add_Remove_Elements_locator}
+    Wait Until Location Contains    ${Add_Remove_Elements_location_string}
+    Wait Until Element Is Visible   ${Add_Remove_Elements_heading_locator}
+    Wait and click element      ${Add_Elements_locator}
+    Wait and click element      ${Delete_Elements_locator}
+    Page Should Not Contain    Delete
+    
+    
+
+
+
+
+
+
 

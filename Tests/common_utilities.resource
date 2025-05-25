@@ -28,5 +28,4 @@ Get texts from all visible elements
            Append To List       ${elements_text_list}      ${text}
     END
     [Return]   ${elements_text_list}
-    Wait Until Element Is Visible    locator
-    Input Text  locator     text
+    print("name")

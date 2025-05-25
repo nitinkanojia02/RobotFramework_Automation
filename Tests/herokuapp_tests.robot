@@ -34,6 +34,7 @@ Add Remove Elements
     Wait and click element      ${Delete_Elements_locator}
     Page Should Not Contain    Delete
 
+
     
     
 

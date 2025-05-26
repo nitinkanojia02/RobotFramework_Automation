@@ -28,4 +28,4 @@ Get texts from all visible elements
            Append To List       ${elements_text_list}      ${text}
     END
     [Return]   ${elements_text_list}
-    print("name")
+

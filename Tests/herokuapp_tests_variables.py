@@ -26,6 +26,7 @@ basic_auth_successful_message=  "//p[contains(text(),'Congratulations')]"
 checkbox_locator=  "//a[text()='Checkboxes']"
 checkbox_location_string=  "checkboxes"
 checkbox_heading_locator=  "//h3[text()='Checkboxes']"
+checkboxes=  "//input[@type='checkbox']"
 first_checkbox_locator=  "//input[@type='checkbox'][1]"
 second_checkbox_locator=  "//input[@type='checkbox'][2]"
 

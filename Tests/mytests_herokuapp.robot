@@ -34,6 +34,7 @@ chcekbox testing
    Wait and click element       ${checkbox_locator}
    Wait Until Location Contains     ${checkbox_location_string}
    Wait Until Element Is Visible        ${checkbox_heading_locator}
+   Page Should Contain Checkbox     ${checkboxes}
    Checkbox Should Not Be Selected     ${first_checkbox_locator}
    Select Checkbox     ${first_checkbox_locator}
    Checkbox Should Be Selected     ${second_checkbox_locator}

@@ -10,8 +10,8 @@ ${key_label}   ENTER
 *** Keywords ***
 #   Generic Keywords
 Wait and click element
-    [Arguments]     ${common xpath}
-    Wait Until Element Is Visible    ${common xpath}
+    [Arguments]     ${common_xpath}
+    Wait Until Element Is Visible    ${common_xpath}
     Click Element    ${common xpath}
 
 Wait and input text into element

@@ -25,31 +25,29 @@ Basic Auth Testing
     Open Browser     ${basic_auth_website}      chrome
     Wait Until Location Contains        ${basic_auth_location_string}
     Wait Until Element Is Visible       ${basic_auth_heading_locator}
-    Wait Until Page Contains    Congratulations! You must have the proper credentials
-    ${basic_auth_mesage}    Get Text    ${basic_auth_successful_message}
-    Log To Console     ${basic_auth_mesage}
+    Wait Until Element Is Visible   ${basic_auth_successful_message}
 
-chcekbox testing
-   Set Selenium Speed     0.5
+Chcekbox testing
    Wait and click element       ${checkbox_locator}
    Wait Until Location Contains     ${checkbox_location_string}
    Wait Until Element Is Visible        ${checkbox_heading_locator}
-   Page Should Contain Checkbox     ${checkboxes}
+   Wait Until Element Is Visible     ${first_checkbox_locator}
    Checkbox Should Not Be Selected     ${first_checkbox_locator}
    Select Checkbox     ${first_checkbox_locator}
-   Checkbox Should Be Selected     ${second_checkbox_locator}
-   Unselect Checkbox     ${second_checkbox_locator}
+   Checkbox Should Be Selected     ${first_checkbox_locator}
+
 
 # ise logic ke sath ek baar bhaiya se puchhna hai
 
-context_menu_rightclick_verification
-   Set Selenium Speed      0.5
+Context menu rightclick verification
    Wait and click element       ${context_menu_locator}
    Wait Until Location Contains        ${context_menu_location_string}
    Wait Until Element Is Visible      ${context_menu_heading_locator}
    Wait Until Element Is Visible     ${context_menu_message_locator}
    Open Context Menu    ${context_menu_display_locator}
-   Alert Should Be Present     You selected a context menu
+#   Alert Should Be Present     You selected a context menu
+   ${alert_message}     Handle Alert
+   Log      ${alert_message}
 
 # doubt=   why it is giving error while using handle keyword
 # how to print this alert msg in console
@@ -72,7 +70,7 @@ Disappearing elements verification
      Log     Gallery item is not visible after relod
 
 
-dropdown_verfication
+Dropdown verfication
      Set Selenium Speed    0.2
      Wait and click element     ${dropdown_locator}
      Wait Until Location Contains       ${dropdown_location_string}

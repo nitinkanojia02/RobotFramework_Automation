@@ -21,15 +21,15 @@ Add Remove Elements
     Wait and click element      ${Delete_Elements_locator}
     Wait Until Element Is Not Visible    ${Delete_button_locator}
 
-Basic_Auth_Testing
-    Open Browser    https://admin:admin@the-internet.herokuapp.com/basic_auth       chrome
+Basic Auth Testing
+    Open Browser     ${basic_auth_website}      chrome
     Wait Until Location Contains        ${basic_auth_location_string}
     Wait Until Element Is Visible       ${basic_auth_heading_locator}
     Wait Until Page Contains    Congratulations! You must have the proper credentials
     ${basic_auth_mesage}    Get Text    ${basic_auth_successful_message}
     Log To Console     ${basic_auth_mesage}
 
-chcekbox_testing
+chcekbox testing
    Set Selenium Speed     0.5
    Wait and click element       ${checkbox_locator}
    Wait Until Location Contains     ${checkbox_location_string}
@@ -72,7 +72,7 @@ Disappearing elements verification
 
 
 dropdown_verfication
-     Set Selenium Speed    1
+     Set Selenium Speed    0.2
      Wait and click element     ${dropdown_locator}
      Wait Until Location Contains       ${dropdown_location_string}
      Wait Until Element Is Visible      ${dropdown_heading}

@@ -22,8 +22,9 @@ Add Remove Elements
     Wait Until Element Is Not Visible    ${Delete_button_locator}
 
 Basic Auth Testing
-    Open Browser     ${basic_auth_website}      chrome
+    Wait and click element      ${basic_auth_locator}
     Wait Until Location Contains        ${basic_auth_location_string}
+    Go To    ${basic_auth_website}
     Wait Until Element Is Visible       ${basic_auth_heading_locator}
     Wait Until Element Is Visible   ${basic_auth_successful_message}
 

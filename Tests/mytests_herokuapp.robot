@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    common_utilities.resource
 Variables   herokuapp_tests_variables.py
+Library     OperatingSystem
 Suite Setup   Run Keywords   Open Browser  ${None}   ${browser}   AND   Maximize Browser Window
 Test Setup    Go To    ${herokuapp_website}
 Suite Teardown   Close Browser
@@ -84,6 +85,74 @@ Dropdown verfication
      Select From List By Label    ${dropdown_list_locator}     Option 1
      List Selection Should Be     ${dropdown_list_locator}      Option 1
      Log      dropdown option 1 verified successfully
+
+
+forbes top 10 billioners list
+     [Setup]    Go To     ${forbes_website_url}
+     Wait Until Element Is Visible    ${forbes_top10_person_locator}
+#     ${elements_text_list}   Create List
+#     ${names}   Get WebElements     ${forbes_top10_person_locator}
+#     FOR     ${name}    IN    @{names}
+#             ${text}   Get Text     ${name}
+#             Append To List       ${elements_text_list}      ${text}
+#     END
+     Get texts from all visible elements  ${forbes_top10_person_locator}
+
+
+Dynamic loaded page elements
+      Wait and click element        ${dynamic_loading_locator}
+      Wait Until Location Contains    ${dynamic_loading_location_string}
+      Wait Until Element Is Visible     ${dynamic_loading_heading}
+      Wait Until Element Is Visible    ${dynamic_loading_message}
+      Wait and click element    ${dynamic_loading_example1_locator}
+      Wait Until Element Is Visible    ${example1_page_hidden_message}
+      Wait and click element    ${start_button_locator}
+      Wait Until Element Is Visible    ${hello_world_locator}
+
+Entry ad test case verification
+      Set Selenium Speed    0.2
+      Wait and click element    ${entry_add_locator}
+      Wait Until Location Contains    ${entry_add_location_string}
+      Wait Until Element Is Visible    ${entry_add_modal_window_locator}
+      Wait Until Element Is Visible    ${entry_add_modal_window_message}
+      Wait and click element    ${entry_add_close_locator}
+      Wait Until Element Is Visible    ${entry_add_heading_locator}
+      Wait Until Element Is Visible    ${entry_add_display_message_locator}
+      Wait Until Keyword Succeeds    10    3     Wait and click element     ${entry_add_re_enable_locator}
+      Wait Until Element Is Visible    ${entry_add_modal_window_locator}
+      Wait Until Element Is Visible    ${entry_add_modal_window_message}
+      Wait and click element    ${entry_add_close_locator}
+
+# doubt 1) --  why re enable function test case giving error, line 120  to  122
+#       2)  --  can we make common keyword of these three lines
+
+Exit intent verification
+       Wait and click element    ${exit_intent_locator}
+       Wait Until Location Contains    ${exit_intent_location_string}
+       Wait Until Element Is Visible    ${exit_intent_heading_locator}
+       Wait Until Element Is Visible    ${exit_intent_heading_message}
+
+#  doubt --  mouse ko upar le jaane nahi aa rha
+
+Check if file is downloaded
+       Wait and click element    ${file_download_locator}
+       Wait Until Location Contains    ${file_download_location_string}
+       Wait Until Element Is Visible    ${file_download_heading_locator}
+       Wait and click element    ${test_upload_link_locator}
+       ${file_path}=   Set Variable     ${test_upload_download_path}
+       File Should Exist    ${file_path}
+
+check if file is upload
+       Wait and click element    ${file_upload_locator}
+       Wait Until Location Contains    ${file_upload_location_string}
+       Wait Until Element Is Visible    ${file_uploader_heading_locator}
+       Choose File    ${choose_file_locator}    ${file_upload_path}
+       Wait and click element    ${upload_locator}
+
+
+
+
+
 
 
           

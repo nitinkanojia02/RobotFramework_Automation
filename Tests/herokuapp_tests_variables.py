@@ -5,3 +5,76 @@ drag_and_drop_location_string= "drag_and_drop"
 a_element_locator= "id:column-a"
 b_element_locator= "id:column-b"
 elements_header= "//div[@class='column']/header"
+
+AB_Testing_locator= "//a[text()='A/B Testing']"
+AB_Testing_heading_locator= "//h3[text()='A/B Test Variation 1']"
+AB_Testing_location_string= "abtest"
+
+Add_Remove_Elements_locator= "//a[text()='Add/Remove Elements']"
+Add_Remove_Elements_location_string= "add_remove_elements/"
+Add_Remove_Elements_heading_locator= "//h3[text()='Add/Remove Elements']"
+Add_Elements_locator= "//button[text()='Add Element']"
+Delete_Elements_locator= "//button[text()='Delete']"
+
+basic_auth_website_url = "https://admin:admin@the-internet.herokuapp.com/basic_auth"
+basic_auth_locator = "//a[text()='Basic Auth']"
+basic_auth_location_string = "basic_auth"
+basic_auth_bold_heading_locator = "//h3[text()='Basic Auth']"
+basic_auth_subheading_locator = "//p[contains(text(),'Congratulations!')]"
+
+checkbox_click_locator = "//a[text()='Checkboxes']"
+checkbox_location_check = "checkboxes"
+bold_checkbox_verify = "//h3[text()='Checkboxes']"
+first_checkbox = "//input[@type='checkbox'][1]"
+
+context_menu_locator = "//a[text()='Context Menu']"
+context_menu_url_check = "context_menu"
+Context_heading_check = "//h3[text()='Context Menu']"
+Context_subheading_check = "//p[contains(text(),'Context menu ')]"
+contextMenu_box_locator = "id:hot-spot"
+
+dropdown_icon_locator = "//a[text()='Dropdown']"
+dropdown_url_check = "dropdown"
+dropdown_heading_locator = "//h3[text()='Dropdown List']"
+dropdown_locator = "id:dropdown"
+
+dynamic_loading_locator = "//a[text()='Dynamic Loading']"
+dynamic_loading_changed_url_locator = "dynamic_loading"
+dynamic_loading_heading_locator = "//h3[text()='Dynamically Loaded Page Elements']"
+example_no_1_locator = "//a[text()='Example 1: Element on page that is hidden']"
+start_button_locator = "//button[text()='Start']"
+inside_start_button = "//h4[text()='Hello World!']"
+
+entry_add_locator = "//a[text()='Entry Ad']"
+entry_url_new_locator = "entry_ad"
+heading_locator = "//h3[text()='Entry Ad']"
+click_here_button_locator = "//a[text()='click here']"
+model_window_locator = "//h3[text()='This is a modal window']"
+close_locator = "//p[text()='Close']"
+
+file_download_locator = "//a[text()='File Download']"
+file_download_location = "download"
+file_heading_locator = "//h3[text()='File Downloader']"
+selenid_file_locator = "//a[text()='selenide-intro.txt']"
+selenid_path = "C:/Users/HP/Downloads/selenide-intro.txt"
+
+file_upload_locator = "//a[text()='File Upload']"
+file_upload_location_url = "upload"
+file_upload_heading_locator = "//h3[text()='File Uploader']"
+choose_file_locator = "id:file-upload"
+upload_button_locator = "id:file-submit"
+upload_file_path_locator = "C:/Users/HP/Downloads/IRCTC_Flights_2013456432(1)_1.pdf"
+file_uploaded_heading_locator    = "//h3[text()='File Uploaded!']"
+
+form_authentication_locator = "//a[text()='Form Authentication']"
+form_authentication_url_locator = "login"
+login_page_heading_locator = "//h2[text()='Login Page']"
+username_box_locator = "id:username"
+username = "tomsmith"
+password_box_locator = "id:password"
+password = "SuperSecretPassword!"
+login_button_locator = "//i[text()=' Login']"
+
+
+
+

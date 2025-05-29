@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   String
-Library    Collections
+Library   Collections
 
 *** Variables ***
 ${browser}  gc
